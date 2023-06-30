@@ -47,7 +47,8 @@ img {
     display: block;
 }
 .container {
-    width: 1158px;
+    /* width: 1158px; */
+    width: 100%;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
@@ -202,12 +203,13 @@ margin: 0 auto;
     visibility: hidden;
 }
 .benefits {
-    padding-top: 120px;
-    padding-bottom: 60px;
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 .benefits-list {
     display: flex;
-    gap: 24px;
+    gap: 72px;
+    flex-wrap: wrap;
 }
 .benefits-subtitle {        
         font-weight: 500;
@@ -218,7 +220,8 @@ margin: 0 auto;
         margin-bottom: 8px;
 }
 .benefits-item {
-    width: calc((100% - 72px) /4);
+    width: 100%;
+    
 }
 .benefits-item-con {
     width: 264px;
@@ -231,6 +234,7 @@ margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    display: none;
 }
 .benefits-item-text {
         font-size: 16px;
@@ -867,4 +871,59 @@ color: #404bbf;
 
 .modal-send-btn:is(:hover, :focus) {
    background-color: #404BBF;
+}
+
+@media screen and (min-width: 428px) {
+    .container {
+        max-width: 428px;
+    }
+        .benefits-item {
+            max-width: 396px;
+        }
+        .benefits-subtitle {
+            text-align: center;
+        }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+    .benefits {
+        padding-top: 96px;
+        padding-bottom: 96px;
+    }
+    .benefits-list {
+        gap: 72px 24px;
+    }
+    .benefits-item {
+        max-width: unset;
+        width: calc((100% - 24px) / 2);
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .container {
+        max-width: 1440px;
+    }
+    .benefits-list {
+        gap: 24px;
+    }
+    .benefits-item {
+        max-width: unset;
+        width: calc((100% - 72px) / 4);
+    }
+        .benefits-item-con {
+            width: 264px;
+            height: 112px;
+            background-color: #F4F4FD;
+            border-radius: 4px;
+            margin-bottom: 8px;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
 }
