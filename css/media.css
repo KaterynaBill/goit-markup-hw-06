@@ -53,7 +53,7 @@
     }
 
     .header-container {
-        gap: 120px;
+        /* gap: 120px; */
     }
 
     .header-list {
@@ -68,6 +68,8 @@
     .address-list {
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
+        gap: 12px;
     }
 
     .address-list-link {
@@ -172,6 +174,7 @@
 
     .footer-email {
         margin: 0;
+    
     }
 
     .modal {
@@ -190,6 +193,7 @@
     .address-list {
         flex-wrap: nowrap;
         gap: 40px;
+        flex-direction: row;
     }
 
     .address-list-link {
@@ -313,7 +317,7 @@
     }
 
     .footer-email {
-        max-width: 396px;
+        max-width: 264px;
         width: 100%;
     }
 }
